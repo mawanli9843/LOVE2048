@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mawanli.love2048"
+   >
+
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 往sdcard中写入数据的权限 -->  
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>  
+      
+    <!-- 在sdcard中创建/删除文件的权限 -->  
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>  
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- Permission for Unit Test -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- youmi -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 以下为可选权限 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+
+    <!-- Bmob -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <!-- shareSDK -->
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <application
+        android:name="com.mawanli.love2048.util.Mapplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="adjustPan" >
+
+            <activity
+                android:name="com.mawanli.love2048.MainActivity"
+                android:label="@string/app_name"
+                android:launchMode="singleTop"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustPan" >
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+            </activity>
+            <activity
+                android:name="com.mawanli.love2048.LoginActivity"
+                android:label="@string/app_name"
+                android:screenOrientation="portrait" >
+            </activity>
+            <activity
+                android:name="com.mawanli.love2048.ThemeSettingActivity"
+                android:label="@string/title_activity_theme_setting"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            </activity>
+            <activity
+                android:name="com.mawanli.love2048.FirstActivity"
+                android:label="@string/app_name2"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            </activity>
+            <activity
+                android:name="com.mawanli.love2048.RankActivity"
+                android:label="@string/title_activity_rank"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            </activity>
+            <activity
+                android:name="com.mawanli.love2048.AboutActivity"
+                android:label="@string/title_activity_about"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            </activity>
+            <activity
+                android:name="com.mawanli.love2048.SettingActivity"
+                android:label="@string/title_activity_setting"
+                android:screenOrientation="portrait" >
+            </activity>
+            <activity
+                android:name="com.mawanli.love2048.GetUndoAndFullVersionActivity"
+                android:label="@string/title_activity_setting"
+                android:screenOrientation="portrait" >
+            </activity>
+            <!-- umeng -->
+            <meta-data
+                android:name="UMENG_APPKEY"
+                android:value="538046ea56240bb648006780" >
+            </meta-data>
+            <meta-data
+                android:name="UMENG_CHANNEL"
+                android:value="usual" >
+            </meta-data>
+
+            <service
+                android:name="com.umeng.update.net.DownloadingService"
+                android:process=":DownloadingService" >
+            </service>
+
+            <activity
+                android:name="com.umeng.update.UpdateDialogActivity"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            </activity>
+            <activity
+                android:name="com.umeng.fb.ConversationActivity"
+                android:theme="@android:style/Theme.NoTitleBar" />
+            <activity
+                android:name="com.umeng.fb.ContactActivity"
+                android:theme="@android:style/Theme.NoTitleBar" />
+
+
+            <receiver android:name="com.mawanli.love2048.broadcastreceiver.MyBroadcastReceiver" >
+                <intent-filter>
+                    <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                </intent-filter>
+            </receiver>
+
+            <activity
+                android:name="com.mawanli.love2048.BaseActivity"
+                android:label="@string/title_activity_base" >
+            </activity>
+        </application>
+
+</manifest>

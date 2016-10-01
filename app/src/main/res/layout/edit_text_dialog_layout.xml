@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <com.mawanli.love2048.view.RoundCornerImageView
+        android:id="@+id/dialog_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:roundHeight="5dp"
+        app:roundWidth="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/big_white_round_corner"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="25dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:textSize="@dimen/dialog_text_size" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:hint="输入您的大名"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/dialog_text_size" >
+
+            <requestFocus />
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@color/white"
+            android:gravity="center" >
+
+            <com.mawanli.love2048.view.ThemeColorWhiteStrokeButton
+                android:id="@+id/button1"
+                android:layout_width="@dimen/text_dialog_button_width"
+                android:layout_height="@dimen/text_dialog_button_width"
+                android:background="@drawable/middle_white_round_corner"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dialog_button_text_size" />
+
+            <com.mawanli.love2048.view.ThemeColorWhiteStrokeButton
+                android:id="@+id/button2"
+                android:layout_width="@dimen/text_dialog_button_width"
+                android:layout_height="@dimen/text_dialog_button_width"
+                android:layout_marginLeft="@dimen/button_margin"
+                android:layout_marginRight="@dimen/button_margin"
+                android:background="@drawable/middle_white_round_corner"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dialog_button_text_size"
+                android:visibility="visible" />
+
+            <com.mawanli.love2048.view.ThemeColorWhiteStrokeButton
+                android:id="@+id/button3"
+                android:layout_width="@dimen/text_dialog_button_width"
+                android:layout_height="@dimen/text_dialog_button_width"
+                android:background="@drawable/middle_white_round_corner"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dialog_button_text_size"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

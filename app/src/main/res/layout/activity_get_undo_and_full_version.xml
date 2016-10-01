@@ -1,0 +1,182 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_bottom"
+        android:layout_marginTop="@dimen/margin_bottom"
+        android:background="@null"
+        android:text="@string/coins"
+        android:textColor="@color/white"
+      />
+
+    <TextView
+        android:id="@+id/coins_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView01"
+        android:layout_marginLeft="@dimen/margin_bottom"
+        android:background="@null"
+        android:gravity="bottom"
+        android:includeFontPadding="false"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="90sp" />
+
+    <com.mawanli.love2048.view.WhiteColorButton
+        android:id="@+id/earn_more_coin_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/coins_number"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:layout_marginRight="@dimen/margin_bottom"
+        android:background="@drawable/middle_white_round_corner"
+        android:gravity="center"
+        android:minEms="6"
+        android:text="@string/earn_more_coin"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/undo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/coins_number"
+        android:layout_centerInParent="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_bottom" >
+
+        <TextView
+            android:id="@+id/undo_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="@string/undo_number"
+            android:textColor="@color/grey"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:orientation="horizontal" >
+
+            <com.mawanli.love2048.view.MyTextSwither
+                android:id="@+id/undo_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="left"
+                android:inAnimation="@anim/score_in_animation"
+                android:outAnimation="@anim/score_out_animation"
+                android:textSize="50sp"/>
+
+            <com.mawanli.love2048.view.ThemeColorButton
+                android:id="@+id/exhange_undo_button"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:background="@drawable/middle_white_round_corner"
+                android:gravity="center"
+                android:minEms="6"
+                android:text="@string/exchange_undo"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/unlock_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/notice"
+        android:layout_below="@+id/undo_layout"
+        android:background="@null"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_bottom"
+        android:paddingRight="@dimen/margin_bottom"
+        android:paddingTop="@dimen/margin_bottom" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="@string/full_version"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="@string/number_1500"
+                android:textColor="@color/white"
+                android:textSize="40sp"/>
+
+            <com.mawanli.love2048.view.WhiteColorButton
+                android:id="@+id/coin_unlock_button"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:gravity="center"
+                android:minEms="6"
+                android:text="@string/coin_unlock"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="@string/number_5"
+                android:textColor="@color/white"
+                android:textSize="40sp"/>
+
+            <com.mawanli.love2048.view.WhiteColorButton
+                android:id="@+id/flyme_unlock_button"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:gravity="center"
+                android:minEms="6"
+                android:text="@string/flyme_unlock"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:layout_marginLeft="@dimen/margin_bottom"
+        android:layout_marginRight="@dimen/margin_bottom"
+        android:layout_marginTop="@dimen/margin_bottom"
+        android:background="@null"
+        android:text="@string/notice"
+        android:textColor="@android:color/white"
+        android:textSize="10sp" />
+
+</RelativeLayout>

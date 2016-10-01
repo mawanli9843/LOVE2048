@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <com.mawanli.love2048.view.RoundCornerImageView
+        android:id="@+id/dialog_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:scaleType="centerCrop"
+        app:roundHeight="20dp"
+        app:roundWidth="20dp" />
+
+    <com.mawanli.love2048.view.RoundCornerImageView
+        android:id="@+id/dialog_bg2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:background="@color/sub_white"
+        android:scaleType="centerCrop"
+        app:roundHeight="20dp"
+        app:roundWidth="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <com.mawanli.love2048.view.ColorPickerCardView
+            android:id="@+id/color_picker_card_view"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="@dimen/color_picker_card_view_width"
+            android:layout_height="@dimen/color_picker_card_view_width"
+            android:layout_gravity="center" />
+
+
+        <SeekBar
+            android:id="@+id/blur_seekbar"
+            android:layout_width="match_parent"
+            android:layout_margin="20dp"
+            android:layout_height="wrap_content"
+            android:thumb="@drawable/thumb"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:orientation="horizontal"
+            android:paddingRight="20dp" >
+
+            <com.mawanli.love2048.view.TransparenThemeStrokeButton
+                android:id="@+id/button1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/middle_white_round_corner"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/no"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
+
+            <com.mawanli.love2048.view.TransparenThemeStrokeButton
+                android:id="@+id/button2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/middle_white_round_corner"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/yes"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

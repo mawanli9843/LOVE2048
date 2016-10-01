@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@null"
+    android:orientation="vertical" >
+
+    <com.mawanli.love2048.view.RoundCornerImageView
+        android:id="@+id/dialog_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_margin="30dp"
+        app:roundHeight="20dp"
+        app:roundWidth="20dp" />
+    
+      <com.mawanli.love2048.view.RoundCornerImageView
+        android:id="@+id/dialog_bg2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:background="@color/sub_white"
+        android:scaleType="centerCrop"
+        app:roundHeight="20dp"
+        app:roundWidth="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="25dp" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <com.mawanli.love2048.holocolorpicker.ColorPicker
+                android:id="@+id/picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.mawanli.love2048.view.ColorPickerCardView
+                android:id="@+id/color_picker_card_view"
+                android:layout_width="@dimen/color_picker_card_view_width"
+                android:layout_height="@dimen/color_picker_card_view_width"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@null"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/r"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <com.mawanli.love2048.holocolorpicker.SVBar
+            android:id="@+id/svbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <com.mawanli.love2048.holocolorpicker.SaturationBar
+            android:id="@+id/saturation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.mawanli.love2048.holocolorpicker.ValueBar
+            android:id="@+id/valuebar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:gravity="center" >
+
+            <com.mawanli.love2048.view.TransparenThemeStrokeButton
+                android:id="@+id/button1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/big_radius_2"
+                android:layout_weight="1"
+                android:background="@drawable/middle_white_round_corner"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/no"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <com.mawanli.love2048.view.TransparenThemeStrokeButton
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/big_radius_2"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/middle_white_round_corner"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/yes"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_bottom"
+        android:gravity="center"
+        android:text="@string/rank_list"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_text_size" />
+
+    <ListView
+        android:id="@+id/rank_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@null"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+        android:listSelector="@color/sub" >
+    </ListView>
+
+    <com.mawanli.love2048.view.MProgressView
+        android:id="@+id/my_progress_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

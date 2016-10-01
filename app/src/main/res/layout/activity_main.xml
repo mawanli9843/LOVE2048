@@ -1,0 +1,271 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mawanli.love2048.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:layout_above="@+id/game_back_view"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:typeface="sans"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/title_activity_main"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/title_text_size"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="bottom"
+                    android:background="@null"
+                    android:baselineAligned="false" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="left">
+
+                        <com.mawanli.love2048.view.SquareLinearLayout
+                            android:id="@+id/rank_layout"
+                            android:layout_width="@dimen/score_width"
+                            android:layout_height="@dimen/score_width"
+                            android:background="@drawable/xbig_white_round_corner"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/rank_tag"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:singleLine="true"
+                                android:text="@string/rank"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <com.mawanli.love2048.view.MyTextSwither
+                                android:id="@+id/rank"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:background="@null"
+                                android:gravity="center"
+                                android:inAnimation="@anim/score_in_animation"
+                                android:outAnimation="@anim/score_out_animation"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </com.mawanli.love2048.view.SquareLinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp" >
+
+                        <com.mawanli.love2048.view.SquareLinearLayout
+                            android:id="@+id/high_score_layout"
+                            android:layout_width="@dimen/score_width"
+                            android:layout_height="@dimen/score_width"
+                            android:background="@drawable/xbig_white_round_corner"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/high_score_tag"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:singleLine="true"
+                                android:text="@string/high"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <com.mawanli.love2048.view.MyTextSwither
+                                android:id="@+id/high_score"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:background="@null"
+                                android:gravity="center"
+                                android:inAnimation="@anim/score_in_animation"
+                                android:outAnimation="@anim/score_out_animation"
+                                android:textSize="18sp" />
+                        </com.mawanli.love2048.view.SquareLinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:paddingLeft="8dp" >
+
+                        <com.mawanli.love2048.view.SquareLinearLayout
+                            android:id="@+id/score_layout"
+                            android:layout_width="@dimen/score_width"
+                            android:layout_height="@dimen/score_width"
+                            android:background="@drawable/xbig_white_round_corner"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/score_tag"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:singleLine="true"
+                                android:text="@string/score"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <com.mawanli.love2048.view.MyTextSwither
+                                android:id="@+id/score"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:background="@null"
+                                android:gravity="center"
+                                android:inAnimation="@anim/score_in_animation"
+                                android:outAnimation="@anim/score_out_animation"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </com.mawanli.love2048.view.SquareLinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    <com.mawanli.love2048.view.GameBackView
+        android:id="@+id/game_back_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_margin="10dp"
+        android:background="@color/transparent"
+        android:columnCount="4"
+        android:rowCount="4" >
+    </com.mawanli.love2048.view.GameBackView>
+
+    <com.mawanli.love2048.view.GameView
+        android:id="@+id/game_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_margin="10dp"
+        android:background="@color/transparent"
+        android:columnCount="4"
+        android:rowCount="4" />
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:padding="15dp"
+        android:layout_above="@id/textView1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@null" >
+
+            <com.mawanli.love2048.view.WhiteColorButton
+                android:id="@+id/button3"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/white_button_selector"
+                android:gravity="center"
+                android:text="@string/setting"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@null" >
+
+            <com.mawanli.love2048.view.WhiteColorButton
+                android:id="@+id/button1"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/white_button_selector"
+                android:gravity="center"
+                android:text="@string/restart"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@null" >
+
+            <com.mawanli.love2048.view.WhiteColorButton
+                android:id="@+id/button2"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/white_button_selector"
+                android:gravity="center"
+                android:text="@string/undo"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:background="@null"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp"
+        android:paddingBottom="2dp"
+        android:paddingLeft="2dp"
+        android:paddingTop="2dp"
+        android:text="@string/title2_activity_main"
+        android:textColor="@color/white"
+        android:textSize="8sp" />
+
+</RelativeLayout>

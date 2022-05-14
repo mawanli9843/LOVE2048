@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <com.mawanli.love2048.view.RoundCornerImageView
+        android:id="@+id/dialog_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:roundHeight="5dp"
+        app:roundWidth="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/big_white_round_corner"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:textSize="@dimen/dialog_text_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:gravity="center" >
+
+            <com.mawanli.love2048.view.ThemeColorWhiteStrokeButton
+                android:id="@+id/button1"
+                android:layout_width="@dimen/text_dialog_button_width"
+                android:layout_height="@dimen/text_dialog_button_width"
+                android:background="@drawable/middle_white_round_corner"
+                android:gravity="center"
+                android:text="Button1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dialog_button_text_size" />
+
+            <com.mawanli.love2048.view.ThemeColorWhiteStrokeButton
+                android:id="@+id/button2"
+                android:layout_width="@dimen/text_dialog_button_width"
+                android:layout_height="@dimen/text_dialog_button_width"
+                android:layout_marginLeft="@dimen/button_margin"
+                android:layout_marginRight="@dimen/button_margin"
+                android:background="@drawable/middle_white_round_corner"
+                android:gravity="center"
+                android:text="Button2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dialog_button_text_size"
+                android:visibility="gone" />
+
+            <com.mawanli.love2048.view.ThemeColorWhiteStrokeButton
+                android:id="@+id/button3"
+                android:layout_width="@dimen/text_dialog_button_width"
+                android:layout_height="@dimen/text_dialog_button_width"
+                android:background="@drawable/middle_white_round_corner"
+                android:gravity="center"
+                android:minEms="4"
+                android:text="Button3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dialog_button_text_size"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mawanli.love2048">
+
+    <application
+        android:name="com.mawanli.love2048.util.Mapplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_launcher_512"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher_512"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Love2048"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Love2048"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mawanli.love2048.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mawanli.love2048.ThemeSettingActivity"
+            android:label="@string/title_activity_theme_setting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mawanli.love2048.FirstActivity"
+            android:label="@string/app_name2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mawanli.love2048.RankActivity"
+            android:label="@string/title_activity_rank"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mawanli.love2048.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mawanli.love2048.SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mawanli.love2048.GetUndoAndFullVersionActivity"
+            android:label="@string/title_activity_setting"
+            android:screenOrientation="portrait" />
+        <!-- umeng -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="538046ea56240bb648006780" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="usual" />
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" />
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.umeng.fb.ConversationActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.umeng.fb.ContactActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+
+        <receiver
+            android:name="com.mawanli.love2048.broadcastreceiver.MyBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.mawanli.love2048.BaseActivity"
+            android:label="@string/title_activity_base" />
+    </application>
+
+</manifest>
